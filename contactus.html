@@ -49,19 +49,28 @@
     Please note that we will not share any of the information provided with any other company.
         </p>
         
-        <form action="http://cashproductionsonline.com/_gdForm/webformmailer.asp" method="POST">
-<input type="hidden" name="subject" value="Sloganizer Comment" />
-<input type="hidden" name="redirect" value="../Sloganizer/thanks.html" />
+        <!-- <form action="http://cashproductionsonline.com/_gdForm/webformmailer.asp" method="POST"> -->
+        <form action="http://contactus.apphb.com/" method="POST">
+			<input type="hidden" name="subject" value="Sloganizer Comment" />
+			<input type="hidden" name="redirect" id="redirectUrl" value="./thanks.html" />
 
-<p> First Name:<br/><input type="text" name="FirstName" /></p>
-<p>Last Name :<br/><input type="text" name="LastName" /></p>
-<p>Email:<br/><input type="html" name="email" /></p>
-<p>Comments:<br/><textarea name="comments" cols="40" rows="10">
-Type comments here.</textarea></p>
-<p>
-<input type="submit" name="submit" value="submit"/>
-</p>
-<input type="hidden" name="form_order" value="alpha"/> <input type="hidden" name="form_interval" value="default"/> <input type="hidden" name="form_format" value="html"/> </form>
+			<p>First Name:<br/><input type="text" name="FirstName" /></p>
+			<p>Last Name :<br/><input type="text" name="LastName" /></p>
+			<p>Email:<br/><input type="html" name="email" /></p>
+			<p>Comments:<br/><textarea name="comments" cols="40" rows="10">Type comments here.</textarea></p>
+			<p><input type="submit" name="submit" value="submit"/></p>
+			<input type="hidden" name="form_order" value="alpha"/> 
+			<input type="hidden" name="form_interval" value="default"/> 
+			<input type="hidden" name="form_format" value="html"/> 
+		</form>
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				document.getElementById("redirectUrl").value = "http://" + location.hostname + "/" + document.getElementById("redirectUrl").value;
+			}; 
+		</script>		
+		
+		
 <!-- InstanceEndEditable --></div>
 
 <div class="left"> 
